@@ -3,7 +3,7 @@
 
 llm-d Router — Standalone Mode
 ```bash
-helm install llm-d-router \
+helm upgrade -i llm-d-router \
   oci://ghcr.io/llm-d/charts/llm-d-router-standalone \
   --namespace llm-d \
   --create-namespace
@@ -11,7 +11,7 @@ helm install llm-d-router \
 
 llm-d Router — Gateway Mode
 ```bash
-helm install llm-d-router-gateway \
+helm upgrade -i llm-d-router-gateway \
   oci://ghcr.io/llm-d/charts/llm-d-router-gateway \
   --namespace llm-d \
   --create-namespace
