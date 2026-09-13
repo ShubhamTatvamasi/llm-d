@@ -18,6 +18,8 @@ helm upgrade -i llm-d-router-gateway \
   --namespace llm-d \
   --create-namespace \
   --set 'router.modelServers.matchLabels.app=vllm' \
-  --set 'router.resources=null' \
-  --set 'router.epp.resources=null'
+  --set 'router.epp.resources.requests.cpu=100m' \
+  --set 'router.epp.resources.requests.memory=128Mi' \
+  --set 'router.epp.resources.limits.cpu=500m' \
+  --set 'router.epp.resources.limits.memory=512Mi'
 ```
