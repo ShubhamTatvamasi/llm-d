@@ -16,5 +16,6 @@ helm upgrade -i llm-d-router-gateway \
   oci://ghcr.io/llm-d/charts/llm-d-router-gateway \
   --version v0 \
   --namespace llm-d \
-  --create-namespace
+  --create-namespace \
+  --set 'router.modelServers.matchLabels.app=vllm'
 ```
