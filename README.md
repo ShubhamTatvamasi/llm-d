@@ -17,5 +17,7 @@ helm upgrade -i llm-d-router-gateway \
   --version v0 \
   --namespace llm-d \
   --create-namespace \
-  --set 'router.modelServers.matchLabels.app=vllm'
+  --set 'router.modelServers.matchLabels.app=vllm' \
+  --set 'router.resources=null' \
+  --set 'router.epp.resources=null'
 ```
