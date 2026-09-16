@@ -10,6 +10,12 @@ helm upgrade -i llm-d-router \
   --create-namespace
 ```
 
+Install Gateway API:
+```bash
+kubectl apply -f https://github.com/kubernetes-sigs/gateway-api/releases/download/v1.6.1/standard-install.yaml
+kubectl apply -f https://github.com/kubernetes-sigs/gateway-api-inference-extension/releases/download/v1.6.0/v1-manifests.yaml
+```
+
 llm-d Router — Gateway Mode
 ```bash
 helm upgrade -i llm-d-router-gateway \
